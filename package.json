@@ -1,0 +1,19 @@
+{
+  "name": "catalog-site",
+  "version": "1.0.0",
+  "description": "Catalog web page",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app",
+    "dev": "node --watch --env-file=.env app"
+  },
+  "author": "Ilya Kanstanchuk",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "multer": "^1.4.5-lts.2"
+  }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./particials/head.ejs") %>
+<body>
+    <%- include("./particials/header.ejs") %>
+    <h2><%=title%></h2>
+    <div class="itemInfo">
+        <img src="/catalog/image/<%= product._id %>" />
+        <p class="title"><%= product.title %></p>
+        <p class="price"><%= product.price %></p>
+        <p class="snippet"><%= product.snippet %></p>
+        <p class="body"><%= product.body %></p>
+        <a style="cursor: pointer;" class="delete" data-doc="<%= product._id %>">delete</a>
+    </div>
+</body>
+<script src="/js/script.js"></script>
+</html>

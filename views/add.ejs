@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./particials/head.ejs") %>
+<body>
+    <%- include("./particials/header.ejs") %>
+    <h2><%=title%></h2>
+    <div class="create-product">
+        <form action="/catalog" method="POST" enctype="multipart/form-data">
+          <label for="title">Product title:</label>
+          <input type="text" id="title" name="title" required>
+          <label for="snippet">Product snippet:</label>
+          <input type="text" id="snippet" name="snippet" required>
+          <label for="price">Product price:</label>
+          <input type="text" id="price" name="price" required>
+          <label for="body">Product full information:</label>
+          <textarea id="body" name="body" required></textarea>
+          <label for="image">Product image:</label>
+          <input type="file" name="image" accept="image/*" required />
+          <button type="submit">Upload</button>
+        </form>
+      </div>
+</body>
+</html>
