@@ -3,19 +3,21 @@
 <%- include("./particials/head.ejs") %>
 <body>
     <%- include("./particials/header.ejs") %>
-    <h2><%=title%></h2>
-    <div class="catalog-elements">
-      <% products.forEach(product => { %>
-        <div>
-          <a class="item" href="/catalog/<%= product._id %>">
-            <img src="/catalog/image/<%= product._id %>" />
-            <p class="title"><%= product.title %></p>
-            <p class="price"><%= product.price %></p>
-            <p class="snippet"><%= product.snippet %></p>
-          </a>
-        </div>
-      <% }); %>
-      <a href="/add" class="add-page">ADD</a>
+    <div class="catalog-page">
+      <h2><%=title%></h2>
+      <div class="catalog-elements">
+        <% products.forEach(product => { %>
+          <div class="single-element">
+            <a class="item" href="/catalog/<%= product._id %>">
+              <img src="/catalog/image/<%= product._id %>" />
+              <p class="title"><%= product.title %></p>
+              <p class="price"><%= product.price %></p>
+              <p class="snippet"><%= product.snippet %></p>
+            </a>
+          </div>
+        <% }); %>
+        <a href="/add" class="add-page"></a>
+      </div>
     </div>
 </body>
 </html>
